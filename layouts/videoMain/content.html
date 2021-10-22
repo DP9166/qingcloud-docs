@@ -62,9 +62,10 @@
 	{{ end }}
 
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" style="max-width: 800px;">
+		<div class="modal-dialog" style="max-width: 600px;">
 			<div class="modal-content">
-				<video id="video" width="800" height="400" class="product-video" controls="controls" src=""></video>
+				<video id="video" width="800" height="460" class="product-video" autoplay="autoplay" controls="controls" src=""></video>
+				<span class="video-close"></span>
 			</div>
 		</div>
 	</div>
@@ -143,5 +144,9 @@
 
 	$('.card').on('click', function () {
 		$("#video").attr('src', $(this).attr('data-url'))
+	});
+
+	$('.video-close').on('click', function () {
+		$('.modal').click()
 	});
 </script>
