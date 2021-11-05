@@ -28,10 +28,6 @@
 @import "pageinfo";
 @import "styles_project";
 
-@if $td-enable-google-fonts {
-    @import url($web-font-path);
-}
-
 footer {
     min-height: 150px;
 
@@ -55,3 +51,4 @@ footer {
 @import "console/product-index";
 @import "console/guide";
 @import "console/search";
+@import "console/sidebar-tree";

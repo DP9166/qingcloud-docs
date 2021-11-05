@@ -23,7 +23,7 @@
 }
 
 .td-content {
-    padding: 20px 24px;
+    padding: 8px 24px;
 
     .td-page-top {
         display: flex;
@@ -43,6 +43,7 @@
         font-weight: normal;
         line-height: 1.71;
         color: #3f5264;
+        white-space: nowrap;
     }
 
     .icon-edit {
@@ -50,7 +51,7 @@
     }
 
     section {
-        padding-top: 28px;
+        padding-top: 4px;
     }
 }
 
@@ -87,7 +88,6 @@
     display: flex;
     font-size: 14px;
     line-height: 1.71;
-    padding-top: 20px;
 
     .doc_fix_click {
         padding-left: 2rem;
@@ -107,7 +107,7 @@
     padding: 0px 24px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .td-main .td-main-section-title {
         display: none;
     }
@@ -134,7 +134,7 @@
                 font-weight: 500;
                 line-height: normal;
                 color: #020508;
-                border-radius: 3px 3px 0 0;
+                border-radius: 3px;
                 background-color: #e4ebf1;
                 padding: 10px 16px;
                 margin-bottom: 0;
@@ -158,18 +158,46 @@
 
 }
 
-@media (min-width: 768px) {
+.console-tree-title{
+    display:none;
+}
+
+@media (min-width: 760px) {
     .td-sidebar__inner {
         top: 0;
     }
 
     .td-sidebar {
         padding-right: 1rem;
-        margin-top: 0;
+        margin-top: -1px;
     }
 
     .td-main main {
         padding-top: 0;
         padding-right: 40px;
     }
+
+    .row.flex-xl-nowrap{
+        border-top:solid 1px #e4ebf1;
+    }
+
+    .console-tree-title{
+        display:block;
+        padding: 12px 0 6px 24px;
+        border-top: solid 1px #e4ebf1;
+    }
+}
+
+.fix-background-like{
+    background-image: url(/images/icons/like.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fix-background-unlike{
+    background-image: url(/images/icons/Point-out.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 65%;
+    margin-left: 1.5rem;
 }

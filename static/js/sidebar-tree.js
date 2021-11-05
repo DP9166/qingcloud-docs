@@ -32,13 +32,11 @@
 
         var parent = elem.parentNode;
         while (parent.classList.contains('menu__list') && parent.classList.contains('active')) {
-          console.log('parent');
-          parent.style.maxHeight = 100 * parent.children.length + "px";
+          parent.style.maxHeight = "100%";
           parent = parent.parentNode;
         }
 
         if (content.style.maxHeight) {
-          console.log('null');
           content.style.maxHeight = null;
           content.classList.remove('active');
           menuTitleIcon.classList.add('right');
@@ -47,8 +45,11 @@
             menuTitleIcon.classList.remove('down');
           
         } else {
-          console.log('scrollHeight');
-          content.style.maxHeight = content.scrollHeight + "px";
+		  if(content.scrollHeight > 0){
+			content.style.maxHeight = content.scrollHeight + "px";
+		  }else{
+			content.style.maxHeight = "100%";
+		  }
           content.classList.add('active');
           menuTitleIcon.classList.remove('right');
           

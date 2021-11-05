@@ -7,15 +7,14 @@
 
     p, li, td {
         font-weight: normal;
-        font-size: 0.85rem;
-        color: #68747f;
-        line-height: 1.71;
+        font-size: 14px;
+        color: #324558;
+        line-height: 1.8;
     }
 
     > h1 {
-        font-weight: 500;
-        margin-bottom: 8px;
-        color: #31383e;
+        margin-bottom: 16px;
+        color: #1d2c39;
     }
 
     > h2 {
@@ -52,22 +51,51 @@
         margin-bottom: $spacer;
         color: $gray-600;
         border-radius: 4px;
-        background-color: #f6f8fa;
+        background-color: #D8ECDE;
         border-left: 3px solid #00a971;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
 
         > p {
             font-size: 14px;
-            color: #a1a6ab;
+            color: #939ea9;
             line-height: 1.71;
+            margin-bottom:0;
         }
+        // 补充有序列表中无序转变成有序样式的问题
+		> ul li {
+			list-style: initial;
+		}
     }
 
     > ul li, > ol li {
         margin-bottom: .25rem;
+        list-style: decimal;
+        margin-left: 1em;
+        > blockquote {
+            padding: 10px 24px;
+            margin-bottom: $spacer;
+            color: $gray-600;
+            border-radius: 4px;
+            background-color: #d8ecde;
+            border-left: 3px solid #00a971;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            > p {
+                font-size: 14px;
+                color: #a1a6ab;
+                line-height: 1.71;
+                margin-bottom:0;
+            }
+        }
     }
 
+    > ul li {
+        list-style: disc;
+        margin-left: 1em;
+
+    }
     strong {
         font-weight: $font-weight-bold;
     }
@@ -83,6 +111,17 @@
 
     .lead {
         margin-bottom: 1.5rem;
+    }
+
+    details{
+        line-height: 2;
+        > p{
+            margin-left: 23px;
+            line-height: 1.8;
+        }
+        > summary > p{
+            display: contents;
+        }
     }
 }
 
